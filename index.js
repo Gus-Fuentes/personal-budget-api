@@ -6,11 +6,11 @@ const PORT = process.env.PORT || 3000;
 
 const app = express()
 
-app.use("/generate", generate.generateRoute)
+app.use("/envelopes/generate", generate.generateRoute)
 app.use("/envelopes", envelopes.envelopeRoute)
 
 app.get('/', (req, res, next)=>{
-    res.send('Hello World');
+    res.send('Welcome to Personal Budget');
 })
 
 
