@@ -1,9 +1,12 @@
-import global from "../global.js"
+import global from "./global.js"
 import express, { Router } from "express"
 
 const generateRoute = Router()
 
 generateRoute.use(express.json())
+
+//TO-DO
+// -- !! CONFIRM DATA VALIDATION FROM req.body.envelope
 
 generateRoute.post('/', (req, res, next)=>{
     //add an ID to the envelope

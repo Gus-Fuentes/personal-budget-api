@@ -1,6 +1,6 @@
 import express from 'express';
-import generate from "./routes/generate.js";
-import envelopes from "./routes/envelopes.js";
+import generate from "./src/generate.js";
+import envelopes from "./src/envelopes.js";
 
 const PORT = process.env.PORT || 3000;
 
