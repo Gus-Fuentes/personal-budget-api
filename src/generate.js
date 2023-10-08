@@ -8,10 +8,7 @@ generateRoute.use(express.json())
 //TO-DO
 // -- !! CONFIRM DATA VALIDATION FROM req.body.envelope
 
-generateRoute.post('/', (req, res, next)=>{
-    //add an ID to the envelope
-    req.body.envelope.id = global.id;
-    global.id++
+generateRoute.post('/', global.addID, global.envDataValidation, (req, res, next)=>{
 
     if(req.body.envelope){
         global.envelopes.push(req.body.envelope)

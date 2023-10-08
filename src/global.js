@@ -15,10 +15,17 @@ const envDataValidation = (req, res, next)=>{
         res.status(428).send(error.message) // 428 Precondition Required
     }
 }
+const addID = (req, res, next)=>{
+    //add an ID
+    req.body.envelope.id = id;
+    id++;
+    next();
+}
 
 export default {
     envelopes, 
     totalBudget, 
     id,
-    envDataValidation
+    envDataValidation,
+    addID
 };
